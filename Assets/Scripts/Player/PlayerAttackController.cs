@@ -4,7 +4,11 @@ using System.Collections;
 public class PlayerAttackController : MonoBehaviour {
 
 	PlayerMovementController playerMovement;
+	public WolfHealth wolfHealth;
 	Animator animController;
+
+	float attackFrequency = 0.2f;
+	float lastAttackTime;
 
 	// Use this for initialization
 	void Awake () {
@@ -14,8 +18,12 @@ public class PlayerAttackController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Jump") && playerMovement.inZone() == "center") {
+		bool canAttack =  Input.GetButtonDown("Jump") && playerMovement.inZone() == "center" && Time.time > lastAttackTime + attackFrequency;
+		if (canAttack) {
+			lastAttackTime = Time.time;
 			animController.SetTrigger("slash");	
+			wolfHealth.RecieveDamage(5);
 		}
+
 	}
 }

@@ -7,7 +7,7 @@ public class WolfHealth : MonoBehaviour {
 	float hp = 100f;
 
 	public Image healthBarImage;
-
+	public bool vulnerable = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,12 +23,13 @@ public class WolfHealth : MonoBehaviour {
 		healthBarImage.gameObject.SetActive(true);
 	}
 
-	void RecieveDamage (float damage) {
-		hp -= damage;
-		healthBarImage.fillAmount = damage/100f;
-		// TODO: test for damage more that ramaining hp
-		if (hp <= 0) {
-			//DEAD
+	public void RecieveDamage (float damage) {
+		if (!vulnerable) {
+			hp -= damage;
+			healthBarImage.fillAmount = hp/100f;
+			if (hp <= 0) {
+				//DEAD
+			}	
 		}
 	}
 }

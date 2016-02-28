@@ -5,13 +5,14 @@ public class PlayerMovementController : MonoBehaviour {
 
 
 
-//	enum State {
-//		RUNNING,
-//		DODGING,
-//
-//	}
+	enum Zone {
+		BACK,
+		UP,
+		DOWN,
+		CENTER
+	};
 
-
+	Zone currZone = Zone.CENTER;
 	float walkSpeed  = 5f;
 	float jmpBckDistance = 1f;
 	float dodgeTime = 0.35f;
@@ -22,9 +23,8 @@ public class PlayerMovementController : MonoBehaviour {
 	SpriteRenderer sprite;
 
 	Vector2 nextPosition, currPosition;
-	bool dodging = false;
-	bool dodgingBack = false;
-
+	bool jumping = false;
+	bool jumpingBack = false;
 
 	Vector2 centerPosition, backPosition, upPosition, downPosition;
 
@@ -50,20 +50,21 @@ public class PlayerMovementController : MonoBehaviour {
 	}
 
 	void UpdateDodging () {
-		if (!dodging && centerPosition == (Vector2)transform.position) {
+		if (!jumping && currZone == Zone.CENTER) {
 			TryDodging ();	
-		}else if(dodging) {
+		}else if(jumping) {
 			if (currDodgeTime > dodgeTime) {
-				dodging = false;
-				Invoke("BeginDodgingBack", 0.5f);
+				jumping = false;
+				Invoke("BeginReturnAfterJump", 0.5f);
 			}else  {
 				currDodgeTime += Time.deltaTime;
 				transform.position = Vector2.Lerp(currPosition, nextPosition, currDodgeTime/dodgeTime);
 			}	
-		}else if(dodgingBack) {
+		}else if(jumpingBack) {
 			if (currDodgeTime > returnAfterJmpBckTime) {
-				dodgingBack = false;
-				currPosition = centerPosition;
+				jumpingBack = false;
+				currZone = Zone.CENTER;
+
 			}else {
 				currDodgeTime += Time.deltaTime;
 				transform.position = Vector2.Lerp(currPosition, nextPosition, currDodgeTime/dodgeTime);
@@ -71,9 +72,9 @@ public class PlayerMovementController : MonoBehaviour {
 		}	
 	}
 
-	void BeginDodgingBack() {
-		dodgingBack = true;
-		currPosition = nextPosition;
+	void BeginReturnAfterJump() {
+		jumpingBack = true;
+		currPosition = backPosition;
 		nextPosition = centerPosition;
 		currDodgeTime = 0f;
 	}
@@ -87,8 +88,9 @@ public class PlayerMovementController : MonoBehaviour {
 				animController.SetTrigger("jumpBack");
 				nextPosition = backPosition;
 				currPosition = centerPosition;
-				dodging = true;
+				jumping = true;
 				currDodgeTime = 0f;
+				currZone = Zone.BACK;
 			}
 
 			//UPDATE THIS FOR OTHER TIPES OF DODGING
@@ -105,13 +107,25 @@ public class PlayerMovementController : MonoBehaviour {
 	}
 
 	public string inZone() {
-		if (currPosition == backPosition) return "back";
-		if (currPosition == upPosition) return "up";
-		if (currPosition == downPosition) return "down";
-		if (nextPosition == backPosition) return "back";
-		if (nextPosition == upPosition) return "up";
-		if (nextPosition == downPosition) return "down";
-		return "center";
+//		if (currPosition == backPosition || nextPosition == backPosition) return "back";
+//		if (currPosition == upPosition || nextPosition == upPosition) return "up";
+//		if (currPosition == downPosition || nextPosition == downPosition) return "down";
+//		return "center";
+//		Debug.Log(currZone);
+
+		switch (currZone) {
+			case Zone.CENTER:
+				return "center";
+			case Zone.BACK:
+				return "back";
+			case Zone.UP:
+				return "up";
+			case Zone.DOWN:
+				return "down";
+			default:
+				Debug.Log("UKNOWN ZONE STATE");
+				return "center";
+		}
 	}
 
 

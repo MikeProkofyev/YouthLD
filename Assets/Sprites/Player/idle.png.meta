@@ -1,14 +1,15 @@
 fileFormatVersion: 2
-guid: 989f687dd0c4645e4b74aa570b480b88
-timeCreated: 1456677012
+guid: f82bbc788293b48bd8e0f7d20118e02c
+timeCreated: 1456677366
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Wolf_0
+    21300000: idle_0
+    21300002: idle_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -45,33 +46,34 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 15
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Wolf_0
+    - name: idle_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 12
-        width: 58
-        height: 36
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        x: 18
+        y: 18
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -33, y: 36}
-        - {x: -50, y: 29}
-        - {x: -58, y: 23}
-        - {x: -58, y: 16}
-        - {x: -56, y: 14}
-        - {x: -51, y: 6}
-        - {x: -45, y: 6}
-        - {x: -46, y: 0}
-        - {x: 0, y: 0}
-        - {x: 0, y: 36}
+      outline: []
+    - name: idle_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 18
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

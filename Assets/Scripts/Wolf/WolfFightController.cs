@@ -7,8 +7,12 @@ public class WolfFightController : MonoBehaviour {
 
 	public PlayerMovementController playerController;
 	public PlayerHealth playerHealth;
-	public Dictionary<string, bool> zonesUnderAttack = new Dictionary<string, bool>()
-	{
+	WolfHealth wolfHealth;
+	Animator animController;
+
+	float ttime;
+
+	public Dictionary<string, bool> zonesUnderAttack = new Dictionary<string, bool>(){
 		{ "center", false },
 		{ "up", false },
 		{ "down", false },
@@ -16,13 +20,16 @@ public class WolfFightController : MonoBehaviour {
 		
 	};
 
-	void Start () {
-		
+
+
+	void Awake () {
+		wolfHealth = GetComponent <WolfHealth> ();
+		animController = GetComponent<Animator> ();
 	}
 
 	public IEnumerator Fight (){
 		for (;;) {
-			yield return new WaitForSeconds(Random.Range(1f, 2f));
+			yield return new WaitForSeconds(Random.Range(2f, 3f));
 			StartCoroutine(HighAttack());	
 		}
 	}
@@ -38,7 +45,23 @@ public class WolfFightController : MonoBehaviour {
 
 	void ResetZones () {
 		SetAttackZones();
-		Debug.Log("Attack ended");
+//		Debug.Log("Damage ended");
+		StartCoroutine(BecomeInvincibleInSec(1.6f));	
+	}
+
+	IEnumerator BecomeInvincibleInSec (float time) {
+		yield return new WaitForSeconds(time);
+		wolfHealth.vulnerable = false;
+		Debug.Log("Became Invincible");
+		Debug.Log(Time.time - ttime);
+		yield return null;
+	}
+
+	IEnumerator BecomeVulnurableInSec (float time) {
+		yield return new WaitForSeconds(time);
+		wolfHealth.vulnerable = true;
+		Debug.Log("Became vulnurable");
+		yield return null;
 	}
 
 	void SetAttackZones (bool center=false, bool up=false, bool down=false, bool back=false) {
@@ -49,9 +72,12 @@ public class WolfFightController : MonoBehaviour {
 	}
 
 	IEnumerator HighAttack () {
-		yield return new WaitForSeconds(0.1f);
+		ttime = Time.time;
+		animController.SetTrigger("longAttack");
+		StartCoroutine(BecomeVulnurableInSec(0.6f));	
+		yield return new WaitForSeconds(0.6f);
 		SetAttackZones(true, true);
-		Debug.Log("High attack");
+//		Debug.Log("High damage start");
 		Invoke("ResetZones", 0.2f);
 	}
 

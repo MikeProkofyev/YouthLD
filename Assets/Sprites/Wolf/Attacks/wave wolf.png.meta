@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 3de497df632af4611a000b9a902fcb80
+timeCreated: 1456684141
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: wave wolf_0
+    21300002: wave wolf_1
+    21300004: wave wolf_2
+    21300006: wave wolf_3
+    21300008: wave wolf_4
+    21300010: wave wolf_5
+    21300012: wave wolf_6
+    21300014: wave wolf_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 10
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: wave wolf_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 424
+        width: 58
+        height: 36
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 36}
+        - {x: -51, y: 30}
+        - {x: -58, y: 23}
+        - {x: -58, y: 16}
+        - {x: -56, y: 14}
+        - {x: -51, y: 6}
+        - {x: -45, y: 6}
+        - {x: -46, y: 0}
+        - {x: -2, y: 0}
+        - {x: 0, y: 3}
+        - {x: 0, y: 32}
+        - {x: -5, y: 36}
+    - name: wave wolf_1
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 424
+        width: 58
+        height: 36
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 36}
+        - {x: -58, y: 30}
+        - {x: -58, y: 17}
+        - {x: -50, y: 4}
+        - {x: -45, y: 0}
+        - {x: -2, y: 0}
+        - {x: 0, y: 1}
+        - {x: 0, y: 35}
+        - {x: -4, y: 36}
+    - name: wave wolf_2
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 424
+        width: 52
+        height: 42
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: 42}
+        - {x: -52, y: 39}
+        - {x: -52, y: 22}
+        - {x: -40, y: 2}
+        - {x: -31, y: 0}
+        - {x: -5, y: 0}
+        - {x: 0, y: 8}
+        - {x: 0, y: 28}
+        - {x: -16, y: 42}
+    - name: wave wolf_3
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 324
+        width: 48
+        height: 44
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 44}
+        - {x: -48, y: 18}
+        - {x: -26, y: 3}
+        - {x: -20, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: 41}
+        - {x: -9, y: 44}
+    - name: wave wolf_4
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 324
+        width: 51
+        height: 50
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: 50}
+        - {x: -51, y: 31}
+        - {x: -34, y: 28}
+        - {x: -20, y: 1}
+        - {x: -19, y: 0}
+        - {x: -7, y: 0}
+        - {x: 0, y: 7}
+        - {x: 0, y: 30}
+        - {x: -25, y: 50}
+    - name: wave wolf_5
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 324
+        width: 67
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 41}
+        - {x: -54, y: 41}
+        - {x: -67, y: 36}
+        - {x: -67, y: 3}
+        - {x: -49, y: 0}
+        - {x: -11, y: 0}
+        - {x: -9, y: 4}
+        - {x: -5, y: 14}
+        - {x: -5, y: 27}
+    - name: wave wolf_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 224
+        width: 99
+        height: 35
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 35}
+        - {x: -95, y: 18}
+        - {x: -99, y: 13}
+        - {x: -99, y: 0}
+        - {x: -12, y: 0}
+        - {x: -12, y: 23}
+        - {x: -21, y: 35}
+    - name: wave wolf_7
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 224
+        width: 107
+        height: 35
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -107, y: 0}
+        - {x: -12, y: 0}
+        - {x: -12, y: 22}
+        - {x: -24, y: 35}
+        - {x: -43, y: 35}
+        - {x: -107, y: 7}
+      - - {x: -95, y: 7}
+        - {x: -92, y: 8}
+        - {x: -92, y: 11}
+        - {x: -95, y: 12}
+        - {x: -97, y: 10}
+      - - {x: -89, y: 13}
+        - {x: -88, y: 10}
+        - {x: -85, y: 10}
+        - {x: -83, y: 12}
+        - {x: -84, y: 15}
+        - {x: -87, y: 15}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

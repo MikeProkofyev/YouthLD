@@ -1,20 +1,24 @@
 fileFormatVersion: 2
-guid: 0de350d0b1e3c44a2a39bd9ed119afb2
-timeCreated: 1456594302
+guid: d3aeb35a250584b4fa3d2af014a1da3d
+timeCreated: 1456669011
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Jump_back_0
-    21300002: Jump_back_1
-    21300004: Jump_back_2
-    21300006: Jump_back_3
-    21300008: Jump_back_4
-    21300010: Jump_back_5
-    21300012: Jump_back_6
+    21300000: run_0
+    21300002: run_1
+    21300004: run_2
+    21300006: run_3
+    21300008: run_4
+    21300010: run_5
+    21300012: run_6
+    21300014: run_7
+    21300016: run_8
+    21300018: run_9
+    21300020: run_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -57,79 +61,123 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Jump_back_0
+    - name: run_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 87
-        width: 10
+        x: 18
+        y: 210
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: run_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 210
+        width: 18
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: run_2
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 210
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: run_3
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 210
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: run_4
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 212
+        width: 21
         height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Jump_back_1
+    - name: run_5
       rect:
         serializedVersion: 2
-        x: 42
-        y: 87
-        width: 11
-        height: 36
+        x: 11
+        y: 155
+        width: 24
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Jump_back_2
+    - name: run_6
       rect:
         serializedVersion: 2
-        x: 72
-        y: 88
-        width: 12
-        height: 38
+        x: 62
+        y: 155
+        width: 21
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Jump_back_3
+    - name: run_7
       rect:
         serializedVersion: 2
-        x: 104
-        y: 89
-        width: 11
-        height: 38
+        x: 115
+        y: 155
+        width: 18
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Jump_back_4
+    - name: run_8
       rect:
         serializedVersion: 2
-        x: 8
-        y: 38
-        width: 12
-        height: 38
+        x: 162
+        y: 155
+        width: 21
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Jump_back_5
+    - name: run_9
       rect:
         serializedVersion: 2
-        x: 42
-        y: 37
-        width: 11
-        height: 36
+        x: 214
+        y: 155
+        width: 19
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Jump_back_6
+    - name: run_10
       rect:
         serializedVersion: 2
-        x: 74
-        y: 37
-        width: 11
-        height: 37
+        x: 15
+        y: 100
+        width: 18
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

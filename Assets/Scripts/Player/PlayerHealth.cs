@@ -33,7 +33,6 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void RecieveDamage (float damage) {
 		hp -= damage;
-		Debug.Log(hp);
 		cameraController.StartShake();
 		healthBarImage.fillAmount = hp/100f;
 		// TODO: test for damage more that ramaining hp
