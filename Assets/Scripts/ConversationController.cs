@@ -10,7 +10,7 @@ public class ConversationController : MonoBehaviour {
 
 
 	Image progressBar;
-	PlayerController player;
+	PlayerMovementController player;
 
 
 	// Use this for initialization
@@ -20,7 +20,7 @@ public class ConversationController : MonoBehaviour {
 
 	void Awake () {
 		progressBar = GameObject.FindGameObjectWithTag("ProgressBar").GetComponent<Image>();
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController> ();
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementController> ();
 	}
 	
 	// Update is called once per frame
