@@ -12,21 +12,13 @@ public class PlayerMovementController : MonoBehaviour {
 		CENTER
 	};
 
+	float ttime;
+
 	Zone currZone = Zone.CENTER;
 	float walkSpeed  = 5f;
-	float jmpBckDistance = 1f;
-	float dodgeTime = 0.35f;
-	float returnAfterJmpBckTime = 0.75f;
-	float currDodgeTime = 0f;
 
 	Animator animController;
 	SpriteRenderer sprite;
-
-	Vector2 nextPosition, currPosition;
-	bool jumping = false;
-	bool jumpingBack = false;
-
-	Vector2 centerPosition, backPosition, upPosition, downPosition;
 
 	public bool inBattle = false;
 
@@ -50,67 +42,29 @@ public class PlayerMovementController : MonoBehaviour {
 	}
 
 	void UpdateDodging () {
-		if (!jumping && currZone == Zone.CENTER) {
-			TryDodging ();	
-		}else if(jumping) {
-			if (currDodgeTime > dodgeTime) {
-				jumping = false;
-				Invoke("BeginReturnAfterJump", 0.5f);
-			}else  {
-				currDodgeTime += Time.deltaTime;
-				transform.position = Vector2.Lerp(currPosition, nextPosition, currDodgeTime/dodgeTime);
-			}	
-		}else if(jumpingBack) {
-			if (currDodgeTime > returnAfterJmpBckTime) {
-				jumpingBack = false;
-				currZone = Zone.CENTER;
 
-			}else {
-				currDodgeTime += Time.deltaTime;
-				transform.position = Vector2.Lerp(currPosition, nextPosition, currDodgeTime/dodgeTime);
-			}
-		}	
+		if (currZone == Zone.CENTER && Input.anyKeyDown) {
+			TryDodging ();
+		}
 	}
 
-	void BeginReturnAfterJump() {
-		jumpingBack = true;
-		currPosition = backPosition;
-		nextPosition = centerPosition;
-		currDodgeTime = 0f;
+	void StopDodging () {
+		currZone = Zone.CENTER;	
+//		Debug.Log("Dodged for: " + Time.time - ttime+"sec");
 	}
 
 
 	void TryDodging () {
-		if (Input.anyKeyDown) {
 			float h = Input.GetAxisRaw("Horizontal");
 			float v = Input.GetAxisRaw("Vertical");
 			if (h == -1) {
 				animController.SetTrigger("jumpBack");
-				nextPosition = backPosition;
-				currPosition = centerPosition;
-				jumping = true;
-				currDodgeTime = 0f;
+				ttime = Time.time;
 				currZone = Zone.BACK;
 			}
-
-			//UPDATE THIS FOR OTHER TIPES OF DODGING
-//			if (h == -1 || Mathf.Abs(v) != 0) {
-//				animController.SetTrigger("jumpBack");
-//				if (h == -1) nextPosition = leftPosition;
-//				else if (v == 1) nextPosition = upPosition;
-//				else if (v == -1) nextPosition = downPosition;
-//				dodging = true;
-//				currDodgeTime = 0f;
-//				currPosition = centerPosition;
-//			}
-		}	
 	}
 
 	public string inZone() {
-//		if (currPosition == backPosition || nextPosition == backPosition) return "back";
-//		if (currPosition == upPosition || nextPosition == upPosition) return "up";
-//		if (currPosition == downPosition || nextPosition == downPosition) return "down";
-//		return "center";
 //		Debug.Log(currZone);
 
 		switch (currZone) {
@@ -133,10 +87,6 @@ public class PlayerMovementController : MonoBehaviour {
 		if (other.tag == "BattleTrigger") {
 			inBattle = true;
 			animController.SetBool("running", false);
-			centerPosition = transform.position;
-			backPosition = transform.TransformPoint(-1 * jmpBckDistance, 0, 0);
-			upPosition = transform.TransformPoint(0, 1, 0);
-			downPosition = transform.TransformPoint(0, -1, 0);
 		}
 	}
 

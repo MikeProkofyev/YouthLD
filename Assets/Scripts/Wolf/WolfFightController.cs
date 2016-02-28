@@ -30,39 +30,29 @@ public class WolfFightController : MonoBehaviour {
 	public IEnumerator Fight (){
 		for (;;) {
 			yield return new WaitForSeconds(Random.Range(2f, 3f));
-			StartCoroutine(HighAttack());	
+			StartHighAttack();	
 		}
+//		yield return null;
 	}
 
 	
 	// Update is called once per frame
 	void Update () {
 		if (zonesUnderAttack[playerController.inZone()]) {
-			playerHealth.RecieveDamage(5);
+			playerHealth.RecieveDamage(20);
 			ResetZones();
 		}
 	}
 
 	void ResetZones () {
 		SetAttackZones();
-//		Debug.Log("Damage ended");
-		StartCoroutine(BecomeInvincibleInSec(1.6f));	
 	}
 
-	IEnumerator BecomeInvincibleInSec (float time) {
-		yield return new WaitForSeconds(time);
+	void BecomeInvincible () {
 		wolfHealth.vulnerable = false;
-		Debug.Log("Became Invincible");
-		Debug.Log(Time.time - ttime);
-		yield return null;
+//		Debug.Log("Became Invincible");
 	}
-
-	IEnumerator BecomeVulnurableInSec (float time) {
-		yield return new WaitForSeconds(time);
-		wolfHealth.vulnerable = true;
-		Debug.Log("Became vulnurable");
-		yield return null;
-	}
+		
 
 	void SetAttackZones (bool center=false, bool up=false, bool down=false, bool back=false) {
 		zonesUnderAttack["center"] = center;
@@ -71,14 +61,15 @@ public class WolfFightController : MonoBehaviour {
 		zonesUnderAttack["back"] = back;
 	}
 
-	IEnumerator HighAttack () {
-		ttime = Time.time;
-		animController.SetTrigger("longAttack");
-		StartCoroutine(BecomeVulnurableInSec(0.6f));	
-		yield return new WaitForSeconds(0.6f);
+	void EnableHighAttackDamage () {
 		SetAttackZones(true, true);
-//		Debug.Log("High damage start");
-		Invoke("ResetZones", 0.2f);
+		wolfHealth.vulnerable = true;
 	}
+
+	void StartHighAttack () {
+//		ttime = Time.time;
+		animController.SetTrigger("longAttack");
+	}
+
 
 }

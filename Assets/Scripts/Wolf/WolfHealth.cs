@@ -24,7 +24,7 @@ public class WolfHealth : MonoBehaviour {
 	}
 
 	public void RecieveDamage (float damage) {
-		if (!vulnerable) {
+		if (vulnerable) {
 			hp -= damage;
 			healthBarImage.fillAmount = hp/100f;
 			if (hp <= 0) {

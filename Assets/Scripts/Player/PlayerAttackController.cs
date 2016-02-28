@@ -18,8 +18,8 @@ public class PlayerAttackController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		bool canAttack =  Input.GetButtonDown("Jump") && playerMovement.inZone() == "center" && Time.time > lastAttackTime + attackFrequency;
-		if (canAttack) {
+		bool attacking =  Input.GetButtonDown("Jump") && playerMovement.inZone() == "center" && Time.time > lastAttackTime + attackFrequency;
+		if (attacking) {
 			lastAttackTime = Time.time;
 			animController.SetTrigger("slash");	
 			wolfHealth.RecieveDamage(5);
