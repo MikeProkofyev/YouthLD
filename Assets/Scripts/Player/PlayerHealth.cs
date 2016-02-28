@@ -35,9 +35,18 @@ public class PlayerHealth : MonoBehaviour {
 		hp -= damage;
 		cameraController.StartShake();
 		healthBarImage.fillAmount = hp/100f;
+		StartCoroutine("PauseWaitResume", 0.1f);
 		// TODO: test for damage more that ramaining hp
 		if (hp <= 0) {
 			Debug.Log("PLAYER DEAD");
 		}
+	}
+
+
+	IEnumerator PauseWaitResume (float pauseDelay) {
+		yield return new WaitForSeconds(0.05f);
+		Time.timeScale = .0000001f;
+		yield return new WaitForSeconds(pauseDelay * Time.timeScale);
+		Time.timeScale = 1.0f;
 	}
 }

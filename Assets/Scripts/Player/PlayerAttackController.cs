@@ -22,8 +22,11 @@ public class PlayerAttackController : MonoBehaviour {
 		if (attacking) {
 			lastAttackTime = Time.time;
 			animController.SetTrigger("slash");	
-			wolfHealth.RecieveDamage(5);
 		}
 
+	}
+
+	void TryHitWolf () {
+		wolfHealth.RecieveDamage(5);
 	}
 }

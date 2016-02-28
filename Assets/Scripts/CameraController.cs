@@ -4,7 +4,11 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 
  	public float shake = 0f;
+
 	public Transform playerTransform;
+
+	public Transform [] screenTransforms;
+	int currentScreenIdx = 0;
 
 	float shakeAmount = .1f;
 	float decreaseFactor = 13f;
@@ -16,6 +20,7 @@ public class CameraController : MonoBehaviour {
 	Vector3 originalLocalPosition;
 
 	void Start () {
+		transform.position = new Vector3(screenTransforms[0].position.x, 0f, -10f);
 		RecalculateShakeBounds();
 	}
 	
@@ -34,10 +39,14 @@ public class CameraController : MonoBehaviour {
 			Camera.main.transform.localPosition = originalLocalPosition;
 		}
 
+		if (screenTransforms[currentScreenIdx].position.x + 8f < playerTransform.position.x) {
+			ChangeScreenToNext();
+		}
 	}
 
-	public void MoveToPlayer () {
-		transform.position = new Vector3(playerTransform.position.x, 0f, -10f);
+	public void ChangeScreenToNext () {
+		++currentScreenIdx;
+		transform.position = new Vector3(screenTransforms[currentScreenIdx].position.x, 0f, -10f);
 		RecalculateShakeBounds();
 	}
 
