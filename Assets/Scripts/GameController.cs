@@ -32,7 +32,10 @@ public class GameController : MonoBehaviour {
 	}
 		
 	void Start () {
-		if (skipToArena) playerT.position = (Vector2)battleTrigger.position - Vector2.right*4;
+		if (skipToArena){
+			playerT.position = (Vector2)battleTrigger.position - Vector2.right*4;
+//			Debug.Log("player pos " + playerT.position);
+		}
 		storyTxtController.gameObject.SetActive(showStartSequence);
 		if (showStartSequence) storyTxtController.StartCoroutine(storyTxtController.PrintStartMessage());
 		currentState = showStartSequence ? GameState.STARTSEQUENCE : GameState.GAMESTARTED;

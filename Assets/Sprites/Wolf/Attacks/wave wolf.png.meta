@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3de497df632af4611a000b9a902fcb80
-timeCreated: 1456684141
+timeCreated: 1456757077
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,9 @@ TextureImporter:
     21300010: wave wolf_5
     21300012: wave wolf_6
     21300014: wave wolf_7
+    21300016: wave wolf_8
+    21300018: wave wolf_9
+    21300020: wave wolf_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -144,87 +147,147 @@ TextureImporter:
         serializedVersion: 2
         x: 246
         y: 324
-        width: 51
+        width: 49
         height: 50
-      alignment: 8
-      pivot: {x: 1, y: 0}
+      alignment: 9
+      pivot: {x: 1.05, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -51, y: 50}
-        - {x: -51, y: 31}
-        - {x: -34, y: 28}
-        - {x: -20, y: 1}
-        - {x: -19, y: 0}
-        - {x: -7, y: 0}
-        - {x: 0, y: 7}
-        - {x: 0, y: 30}
-        - {x: -25, y: 50}
+      - - {x: -51.450012, y: 50}
+        - {x: -51.450012, y: 31}
+        - {x: -34.450012, y: 28}
+        - {x: -20.450012, y: 1}
+        - {x: -19.450012, y: 0}
+        - {x: -8.450012, y: 0}
+        - {x: -2.4500122, y: 5}
+        - {x: -2.4500122, y: 30}
+        - {x: -25.450012, y: 50}
     - name: wave wolf_5
       rect:
         serializedVersion: 2
         x: 397
         y: 324
-        width: 67
+        width: 60
         height: 41
-      alignment: 8
-      pivot: {x: 1, y: 0}
+      alignment: 9
+      pivot: {x: 1.075, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -25, y: 41}
-        - {x: -54, y: 41}
-        - {x: -67, y: 36}
-        - {x: -67, y: 3}
-        - {x: -49, y: 0}
-        - {x: -11, y: 0}
-        - {x: -9, y: 4}
-        - {x: -5, y: 14}
-        - {x: -5, y: 27}
+      - - {x: -26.5, y: 41}
+        - {x: -54.5, y: 41}
+        - {x: -64.5, y: 30}
+        - {x: -64.5, y: 5}
+        - {x: -40.5, y: 0}
+        - {x: -9.5, y: 0}
+        - {x: -6.5, y: 4}
+        - {x: -4.5, y: 11}
+        - {x: -4.5, y: 28}
     - name: wave wolf_6
       rect:
         serializedVersion: 2
         x: 49
         y: 224
-        width: 99
+        width: 85
         height: 35
-      alignment: 8
-      pivot: {x: 1, y: 0}
+      alignment: 9
+      pivot: {x: 1.2, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -52, y: 35}
-        - {x: -95, y: 18}
-        - {x: -99, y: 13}
-        - {x: -99, y: 0}
-        - {x: -12, y: 0}
-        - {x: -12, y: 23}
-        - {x: -21, y: 35}
+      - - {x: -49, y: 35}
+        - {x: -98, y: 18}
+        - {x: -102, y: 13}
+        - {x: -102, y: 0}
+        - {x: -19, y: 0}
+        - {x: -17, y: 2}
+        - {x: -17, y: 28}
+        - {x: -25, y: 35}
     - name: wave wolf_7
       rect:
         serializedVersion: 2
-        x: 201
+        x: 202
         y: 224
-        width: 107
+        width: 92
         height: 35
-      alignment: 8
-      pivot: {x: 1, y: 0}
+      alignment: 9
+      pivot: {x: 1.2, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -107, y: 0}
-        - {x: -12, y: 0}
-        - {x: -12, y: 22}
-        - {x: -24, y: 35}
-        - {x: -43, y: 35}
-        - {x: -107, y: 7}
-      - - {x: -95, y: 7}
-        - {x: -92, y: 8}
-        - {x: -92, y: 11}
-        - {x: -95, y: 12}
-        - {x: -97, y: 10}
-      - - {x: -89, y: 13}
-        - {x: -88, y: 10}
-        - {x: -85, y: 10}
-        - {x: -83, y: 12}
-        - {x: -84, y: 15}
-        - {x: -87, y: 15}
+      - - {x: -58.399994, y: 35}
+        - {x: -110.399994, y: 6}
+        - {x: -110.399994, y: 2}
+        - {x: -107.399994, y: 0}
+        - {x: -18.399994, y: 0}
+        - {x: -18.399994, y: 33}
+        - {x: -25.399994, y: 35}
+      - - {x: -99.399994, y: 7}
+        - {x: -96.399994, y: 8}
+        - {x: -96.399994, y: 11}
+        - {x: -99.399994, y: 12}
+        - {x: -101.399994, y: 10}
+      - - {x: -93.399994, y: 13}
+        - {x: -92.399994, y: 10}
+        - {x: -89.399994, y: 10}
+        - {x: -87.399994, y: 12}
+        - {x: -88.399994, y: 15}
+        - {x: -91.399994, y: 15}
+    - name: wave wolf_8
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 224
+        width: 54
+        height: 35
+      alignment: 9
+      pivot: {x: 1.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.799988, y: 35}
+        - {x: -64.79999, y: 20}
+        - {x: -64.79999, y: 5}
+        - {x: -60.799988, y: 1}
+        - {x: -56.799988, y: 1}
+        - {x: -43.799988, y: 4}
+        - {x: -33.799988, y: 0}
+        - {x: -12.799988, y: 0}
+        - {x: -10.799988, y: 1}
+        - {x: -10.799988, y: 33}
+        - {x: -14.799988, y: 35}
+    - name: wave wolf_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 124
+        width: 54
+        height: 35
+      alignment: 9
+      pivot: {x: 1.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.800003, y: 35}
+        - {x: -64.8, y: 19}
+        - {x: -64.8, y: 0}
+        - {x: -13.800003, y: 0}
+        - {x: -10.800003, y: 4}
+        - {x: -10.800003, y: 27}
+        - {x: -16.800003, y: 35}
+    - name: wave wolf_10
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 124
+        width: 51
+        height: 34
+      alignment: 9
+      pivot: {x: 1.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60.200012, y: 34}
+        - {x: -61.200012, y: 31}
+        - {x: -61.200012, y: 0}
+        - {x: -12.200012, y: 0}
+        - {x: -10.200012, y: 1}
+        - {x: -10.200012, y: 33}
+        - {x: -12.200012, y: 34}
     outline: []
   spritePackingTag: 
   userData: 

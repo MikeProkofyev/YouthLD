@@ -25,17 +25,18 @@ public class WolfHealth : MonoBehaviour {
 		healthBarImage.gameObject.SetActive(true);
 	}
 
-	public void RecieveDamage (float damage) {
+	public bool RecieveDamage (float damage) {
 		if (vulnerable) {
 			hp -= damage;
 			cameraController.StartShake();
 			healthBarImage.fillAmount = hp/100f;
 			if (hp <= 0) {
 				gameController.HeroWon();
-				return;
 			}	
 			StartCoroutine("PauseWaitResume", 0.2f);
 		}
+
+		return vulnerable;
 	}
 
 	IEnumerator PauseWaitResume (float pauseDelay) {

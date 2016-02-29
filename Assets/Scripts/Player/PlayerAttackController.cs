@@ -10,10 +10,14 @@ public class PlayerAttackController : MonoBehaviour {
 	float attackFrequency = 0.2f;
 	float lastAttackTime;
 
+	AudioSource audioSource;
+	public AudioClip swordHit;
+
 	// Use this for initialization
 	void Awake () {
 		playerMovement = GetComponent<PlayerMovementController> ();
 		animController = GetComponent<Animator> ();
+		audioSource = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +31,9 @@ public class PlayerAttackController : MonoBehaviour {
 	}
 
 	void TryHitWolf () {
-		wolfHealth.RecieveDamage(5);
+		if (wolfHealth.RecieveDamage(5)) {
+			audioSource.PlayOneShot(swordHit);
+		}
+
 	}
 }

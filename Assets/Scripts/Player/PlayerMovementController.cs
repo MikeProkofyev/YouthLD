@@ -4,7 +4,6 @@ using System.Collections;
 public class PlayerMovementController : MonoBehaviour {
 
 
-
 	enum Zone {
 		BACK,
 		UP,
@@ -30,6 +29,7 @@ public class PlayerMovementController : MonoBehaviour {
 	void Awake () {
 		animController = GetComponent<Animator> ();
 		sprite = GetComponent<SpriteRenderer> ();
+
 	}
 	
 	// Update is called once per frame
@@ -50,17 +50,18 @@ public class PlayerMovementController : MonoBehaviour {
 
 	void StopDodging () {
 		currZone = Zone.CENTER;	
-//		Debug.Log("Dodged for: " + Time.time - ttime+"sec");
 	}
 
 
 	void TryDodging () {
 			float h = Input.GetAxisRaw("Horizontal");
-//			float v = Input.GetAxisRaw("Vertical");
+			float v = Input.GetAxisRaw("Vertical");
 			if (h == -1) {
 				animController.SetTrigger("jumpBack");
-				ttime = Time.time;
 				currZone = Zone.BACK;
+			}else if (v == 1) {
+				animController.SetTrigger("jumpUp");
+				currZone = Zone.UP;	
 			}
 	}
 

@@ -10,6 +10,9 @@ public class WolfFightController : MonoBehaviour {
 	WolfHealth wolfHealth;
 	Animator animController;
 
+	AudioSource audioSource;
+	public AudioClip pawHit;
+
 	float ttime;
 
 	public Dictionary<string, bool> zonesUnderAttack = new Dictionary<string, bool>(){
@@ -25,6 +28,7 @@ public class WolfFightController : MonoBehaviour {
 	void Awake () {
 		wolfHealth = GetComponent <WolfHealth> ();
 		animController = GetComponent<Animator> ();
+		audioSource = GetComponent<AudioSource> ();
 	}
 
 	public IEnumerator Fight (){
@@ -39,6 +43,7 @@ public class WolfFightController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (zonesUnderAttack[playerController.inZone()]) {
+			audioSource.PlayOneShot(pawHit);
 			playerHealth.RecieveDamage(20);
 			ResetZones();
 		}
