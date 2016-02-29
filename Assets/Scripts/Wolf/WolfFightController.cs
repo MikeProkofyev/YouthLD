@@ -33,8 +33,15 @@ public class WolfFightController : MonoBehaviour {
 
 	public IEnumerator Fight (){
 		for (;;) {
-			yield return new WaitForSeconds(Random.Range(2f, 3f));
-			StartHighAttack();	
+			yield return new WaitForSeconds(Random.Range(2.5f, 3.5f));
+			switch (Random.Range(0,2)) {
+			case 0:
+				StartHighAttack();
+				break;
+			case 1:
+				StartLongAttack();
+				break;
+			}
 		}
 //		yield return null;
 	}
@@ -55,7 +62,6 @@ public class WolfFightController : MonoBehaviour {
 
 	void BecomeInvincible () {
 		wolfHealth.vulnerable = false;
-//		Debug.Log("Became Invincible");
 	}
 		
 
@@ -66,12 +72,23 @@ public class WolfFightController : MonoBehaviour {
 		zonesUnderAttack["back"] = back;
 	}
 
+	void EnableLongAttackDamage () {
+		SetAttackZones(true, true, true);
+		wolfHealth.vulnerable = true;
+	}
+
 	void EnableHighAttackDamage () {
-		SetAttackZones(true, true);
+		SetAttackZones(true, true, false, true);
 		wolfHealth.vulnerable = true;
 	}
 
 	void StartHighAttack () {
+		//		ttime = Time.time;
+		animController.SetTrigger("highAttack");
+	}
+
+
+	void StartLongAttack () {
 //		ttime = Time.time;
 		animController.SetTrigger("longAttack");
 	}

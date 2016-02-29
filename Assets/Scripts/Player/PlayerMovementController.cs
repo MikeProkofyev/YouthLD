@@ -42,7 +42,6 @@ public class PlayerMovementController : MonoBehaviour {
 	}
 
 	void UpdateDodging () {
-
 		if (currZone == Zone.CENTER && Input.anyKeyDown) {
 			TryDodging ();
 		}
@@ -62,11 +61,13 @@ public class PlayerMovementController : MonoBehaviour {
 			}else if (v == 1) {
 				animController.SetTrigger("jumpUp");
 				currZone = Zone.UP;	
+			}else if (v == -1) {
+				animController.SetTrigger("dodgeDown");
+				currZone = Zone.DOWN;	
 			}
 	}
 
 	public string inZone() {
-//		Debug.Log(currZone);
 
 		switch (currZone) {
 			case Zone.CENTER:

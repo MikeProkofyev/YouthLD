@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: 3c7ab4e7338e641deb4dceca600f6c5f
+timeCreated: 1456768038
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: squats_0
+    21300002: squats_1
+    21300004: squats_2
+    21300006: squats_3
+    21300008: squats_4
+    21300010: squats_5
+    21300012: squats_6
+    21300014: squats_7
+    21300016: squats_8
+    21300018: squats_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 15
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: squats_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 200
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: squats_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 200
+        width: 15
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.51032215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: squats_2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 200
+        width: 17
+        height: 36
+      alignment: 9
+      pivot: {x: 0.48846346, y: 0.54902947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: squats_3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 200
+        width: 17
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: squats_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 200
+        width: 18
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: squats_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 135
+        width: 18
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5091802, y: 0.60032797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: squats_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 135
+        width: 18
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49081972, y: 0.59934473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: squats_7
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 135
+        width: 17
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5097203, y: 0.5656994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: squats_8
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 135
+        width: 17
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: squats_9
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 135
+        width: 15
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

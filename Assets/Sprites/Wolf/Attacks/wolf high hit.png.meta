@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: f686e3f4489204df0b8ab2ed682ae204
+timeCreated: 1456772312
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: wolf high hit_0
+    21300002: wolf high hit_1
+    21300004: wolf high hit_2
+    21300006: wolf high hit_3
+    21300008: wolf high hit_4
+    21300010: wolf high hit_5
+    21300012: wolf high hit_6
+    21300014: wolf high hit_7
+    21300016: wolf high hit_8
+    21300018: wolf high hit_9
+    21300020: wolf high hit_10
+    21300022: wolf high hit_11
+    21300024: wolf high hit_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 8
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 10
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: wolf high hit_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 424
+        width: 58
+        height: 36
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 36}
+        - {x: -51, y: 30}
+        - {x: -58, y: 23}
+        - {x: -58, y: 16}
+        - {x: -56, y: 14}
+        - {x: -51, y: 6}
+        - {x: -45, y: 6}
+        - {x: -46, y: 0}
+        - {x: -2, y: 0}
+        - {x: 0, y: 3}
+        - {x: 0, y: 32}
+        - {x: -5, y: 36}
+    - name: wolf high hit_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 424
+        width: 63
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 6}
+        - {x: -10, y: 13}
+        - {x: -13, y: 15}
+        - {x: -6, y: 11}
+        - {x: -8, y: 9}
+        - {x: -8, y: 8}
+        - {x: -6, y: 6}
+        - {x: 0, y: 5}
+        - {x: 0, y: 19}
+        - {x: -4, y: 29}
+        - {x: -11, y: 33}
+        - {x: -31, y: 33}
+        - {x: -45, y: 29}
+        - {x: -59, y: 21}
+        - {x: -63, y: 16}
+        - {x: -63, y: 11}
+        - {x: -57, y: 6}
+        - {x: -51, y: 6}
+        - {x: -50, y: 2}
+        - {x: -49, y: 0}
+        - {x: -41, y: 0}
+        - {x: -30, y: 11}
+        - {x: -19, y: 0}
+        - {x: -7, y: 0}
+    - name: wolf high hit_2
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 424
+        width: 64
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 15}
+        - {x: -8, y: 8}
+        - {x: -6, y: 6}
+        - {x: 0, y: 5}
+        - {x: 0, y: 30}
+        - {x: -5, y: 33}
+        - {x: -54, y: 33}
+        - {x: -55, y: 32}
+        - {x: -64, y: 21}
+        - {x: -64, y: 0}
+        - {x: -7, y: 0}
+        - {x: -6, y: 4}
+        - {x: -9, y: 11}
+    - name: wolf high hit_3
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 324
+        width: 62
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 15}
+        - {x: -8, y: 8}
+        - {x: -6, y: 6}
+        - {x: 0, y: 5}
+        - {x: 0, y: 23}
+        - {x: -9, y: 33}
+        - {x: -42, y: 33}
+        - {x: -52, y: 30}
+        - {x: -62, y: 21}
+        - {x: -62, y: 11}
+        - {x: -59, y: 5}
+        - {x: -52, y: 0}
+        - {x: -4, y: 0}
+        - {x: -6, y: 4}
+        - {x: -9, y: 11}
+    - name: wolf high hit_4
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 324
+        width: 62
+        height: 34
+      alignment: 9
+      pivot: {x: 1.05, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.100006, y: 8}
+        - {x: -9.100006, y: 6}
+        - {x: -3.100006, y: 5}
+        - {x: -3.100006, y: 19}
+        - {x: -12.100006, y: 33}
+        - {x: -20.100006, y: 34}
+        - {x: -53.100006, y: 34}
+        - {x: -65.100006, y: 25}
+        - {x: -65.100006, y: 4}
+        - {x: -56.100006, y: 0}
+        - {x: -10.100006, y: 0}
+        - {x: -9.100006, y: 4}
+        - {x: -12.100006, y: 11}
+        - {x: -17.100006, y: 15}
+    - name: wolf high hit_5
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 325
+        width: 63
+        height: 37
+      alignment: 9
+      pivot: {x: 1.05, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56.149994, y: 37}
+        - {x: -66.149994, y: 32}
+        - {x: -66.149994, y: 23}
+        - {x: -56.149994, y: 13}
+        - {x: -20.149994, y: 0}
+        - {x: -3.149994, y: 0}
+        - {x: -3.149994, y: 21}
+        - {x: -11.149994, y: 37}
+    - name: wolf high hit_6
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 226
+        width: 66
+        height: 40
+      alignment: 9
+      pivot: {x: 1.1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.600006, y: 40}
+        - {x: -72.600006, y: 40}
+        - {x: -72.600006, y: 21}
+        - {x: -65.600006, y: 5}
+        - {x: -37.600006, y: 0}
+        - {x: -6.600006, y: 0}
+        - {x: -6.600006, y: 24}
+        - {x: -16.600006, y: 39}
+    - name: wolf high hit_7
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 223
+        width: 72
+        height: 39
+      alignment: 9
+      pivot: {x: 1.1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.200012, y: 39}
+        - {x: -74.20001, y: 39}
+        - {x: -79.20001, y: 36}
+        - {x: -79.20001, y: 24}
+        - {x: -59.200012, y: 0}
+        - {x: -7.200012, y: 0}
+        - {x: -7.200012, y: 21}
+        - {x: -12.200012, y: 27}
+    - name: wolf high hit_8
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 226
+        width: 69
+        height: 33
+      alignment: 9
+      pivot: {x: 1.1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75.899994, y: 33}
+        - {x: -75.899994, y: 7}
+        - {x: -72.899994, y: 0}
+        - {x: -6.899994, y: 0}
+        - {x: -6.899994, y: 21}
+        - {x: -19.899994, y: 33}
+    - name: wolf high hit_9
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 124
+        width: 67
+        height: 35
+      alignment: 9
+      pivot: {x: 1.1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.700012, y: 15}
+        - {x: -25.700012, y: 16}
+        - {x: -23.700012, y: 15}
+        - {x: -14.700012, y: 14}
+        - {x: -13.700012, y: 9}
+        - {x: -11.700012, y: 7}
+        - {x: -6.700012, y: 7}
+        - {x: -6.700012, y: 32}
+        - {x: -10.700012, y: 35}
+        - {x: -66.70001, y: 35}
+        - {x: -73.70001, y: 29}
+        - {x: -73.70001, y: 2}
+        - {x: -64.70001, y: 0}
+        - {x: -13.700012, y: 0}
+        - {x: -12.700012, y: 4}
+        - {x: -17.700012, y: 11}
+    - name: wolf high hit_10
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 124
+        width: 65
+        height: 35
+      alignment: 9
+      pivot: {x: 1.075, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.875, y: 7}
+        - {x: -4.875, y: 20}
+        - {x: -13.875, y: 35}
+        - {x: -53.875, y: 35}
+        - {x: -69.875, y: 23}
+        - {x: -69.875, y: 9}
+        - {x: -67.875, y: 0}
+        - {x: -9.875, y: 0}
+        - {x: -12.875, y: 8}
+        - {x: -9.875, y: 7}
+    - name: wolf high hit_11
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 124
+        width: 65
+        height: 35
+      alignment: 9
+      pivot: {x: 1.05, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60.25, y: 35}
+        - {x: -68.25, y: 30}
+        - {x: -68.25, y: 9}
+        - {x: -61.25, y: 0}
+        - {x: -3.25, y: 0}
+        - {x: -3.25, y: 29}
+        - {x: -13.25, y: 35}
+    - name: wolf high hit_12
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 24
+        width: 65
+        height: 35
+      alignment: 9
+      pivot: {x: 1.025, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.625, y: 7}
+        - {x: -1.625, y: 20}
+        - {x: -10.625, y: 35}
+        - {x: -50.625, y: 35}
+        - {x: -66.625, y: 23}
+        - {x: -66.625, y: 9}
+        - {x: -64.625, y: 0}
+        - {x: -6.625, y: 0}
+        - {x: -9.625, y: 8}
+        - {x: -6.625, y: 7}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
