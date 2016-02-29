@@ -4,9 +4,10 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
-	float hp = 100f;
+	public float hp = 100f;
 
 	public Image healthBarImage;
+	public GameController gameController;
 	CameraController cameraController;
 
 
@@ -35,11 +36,13 @@ public class PlayerHealth : MonoBehaviour {
 		hp -= damage;
 		cameraController.StartShake();
 		healthBarImage.fillAmount = hp/100f;
-		StartCoroutine("PauseWaitResume", 0.1f);
 		// TODO: test for damage more that ramaining hp
 		if (hp <= 0) {
 			Debug.Log("PLAYER DEAD");
+			gameController.HeroDied();
+			return;
 		}
+		StartCoroutine("PauseWaitResume", 0.1f);
 	}
 
 

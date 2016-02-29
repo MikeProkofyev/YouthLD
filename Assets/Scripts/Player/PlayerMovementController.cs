@@ -56,7 +56,7 @@ public class PlayerMovementController : MonoBehaviour {
 
 	void TryDodging () {
 			float h = Input.GetAxisRaw("Horizontal");
-			float v = Input.GetAxisRaw("Vertical");
+//			float v = Input.GetAxisRaw("Vertical");
 			if (h == -1) {
 				animController.SetTrigger("jumpBack");
 				ttime = Time.time;

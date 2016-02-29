@@ -8,7 +8,9 @@ public class WolfHealth : MonoBehaviour {
 
 	public Image healthBarImage;
 	public bool vulnerable = false;
+	public GameController gameController;
 	CameraController cameraController;
+
 
 	void Awake () {
 		cameraController = Camera.main.GetComponent<CameraController> ();
@@ -27,11 +29,12 @@ public class WolfHealth : MonoBehaviour {
 		if (vulnerable) {
 			hp -= damage;
 			cameraController.StartShake();
-			StartCoroutine("PauseWaitResume", 0.2f);
 			healthBarImage.fillAmount = hp/100f;
 			if (hp <= 0) {
-				//DEAD
+				gameController.HeroWon();
+				return;
 			}	
+			StartCoroutine("PauseWaitResume", 0.2f);
 		}
 	}
 
