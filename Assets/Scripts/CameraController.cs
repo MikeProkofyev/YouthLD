@@ -8,7 +8,10 @@ public class CameraController : MonoBehaviour {
 	public Transform playerTransform;
 
 	public Transform [] screenTransforms;
+	public GameObject playerReflection;
+	public Transform wayBackBlocker;
 	int currentScreenIdx = 0;
+
 
 	float shakeAmount = .1f;
 	float decreaseFactor = 13f;
@@ -46,7 +49,11 @@ public class CameraController : MonoBehaviour {
 
 	public void ChangeScreenToNext () {
 		++currentScreenIdx;
+		if (currentScreenIdx == 1) {
+			playerReflection.SetActive(false);
+		}
 		transform.position = new Vector3(screenTransforms[currentScreenIdx].position.x, 0f, -10f);
+		wayBackBlocker.position = new Vector2(screenTransforms[currentScreenIdx].position.x - screenTransforms[currentScreenIdx].GetComponent<SpriteRenderer>().bounds.extents.x, 0);
 		RecalculateShakeBounds();
 	}
 

@@ -18,7 +18,7 @@ public class PlayerMovementController : MonoBehaviour {
 
 	Animator animController;
 	SpriteRenderer sprite;
-
+	public Transform pathBackBlocker;
 	public bool inBattle = false;
 
 	// Use this for initialization
@@ -96,6 +96,9 @@ public class PlayerMovementController : MonoBehaviour {
 		if (horizontalInput != 0) {
 			animController.SetBool("running", true);
 			transform.Translate(Vector3.right * walkSpeed * horizontalInput * Time.deltaTime);
+			if (transform.position.x < pathBackBlocker.position.x) {
+				transform.position = new Vector2(pathBackBlocker.position.x, transform.position.y);
+			}
 			sprite.flipX = horizontalInput == -1 ? true : false;
 		}else if(animController.GetBool("running")) {
 			animController.SetBool("running", false);
