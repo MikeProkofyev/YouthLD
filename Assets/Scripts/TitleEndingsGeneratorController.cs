@@ -7,7 +7,7 @@ public class TitleEndingsGeneratorController : MonoBehaviour {
 
 	public Text textElement;
 
-	string [] endings = {"Jude", "you", "I'm", "my name", "do you", "what's the", "what's your", "love", "don't you", "every day", "don't know", "wanna"};
+	string [] endings = {"Jude", "you", "why do", "I'm", "my name", "do you", "what's the", "what's your", "when I saw", "don't you", "every day", "don't know", "wanna"};
 	int lastEndingIdx = 0;
 	int currEndingIdx = 1;
 
@@ -31,7 +31,7 @@ public class TitleEndingsGeneratorController : MonoBehaviour {
 				currEndingIdx = Random.Range(0, endings.Length);
 			} while (currEndingIdx == lastEndingIdx);
 			lastEndingIdx = currEndingIdx;
-			yield return StartCoroutine("UpdateMessage", endings[currEndingIdx]);	
+			yield return StartCoroutine("UpdateMessage", endings[currEndingIdx] + "...");	
 			yield return new WaitForSeconds(1f);  //Give the player some time to read the message	
 		}
 	}

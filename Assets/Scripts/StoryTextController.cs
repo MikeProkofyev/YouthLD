@@ -11,8 +11,8 @@ public class StoryTextController : MonoBehaviour {
 
 	string startMessage1 = "[I've got to talk to her]";//"One more time into the fray";
 	string startMessage2 = "[Now or never]";
-	string winMessage1 = "- See ya )";
-	string winMessage2 = "[Exhales]";
+	string winMessage1 = "END MESSAGE THAT EXPLAINS STUFF, v0.1";//"- Yeah, see ya )";
+	string winMessage2 = "- [Exhales]";
 	string deathMessage = "Better luck next time";
 
 	public bool finishedStartSeq = false;

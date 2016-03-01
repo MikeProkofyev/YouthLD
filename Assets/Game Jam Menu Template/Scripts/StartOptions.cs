@@ -64,9 +64,11 @@ public class StartOptions : MonoBehaviour {
 	}
 
 	//Once the level has loaded, check if we want to call PlayLevelMusic
-	void OnLevelWasLoaded()
+	void OnLevelWasLoaded(int level)
 	{
-		playMusic.StopMusic();
+		if (level == 1) {
+			playMusic.StopMusic();	
+		}
 //		if (changeMusicOnStart)
 //		{
 //			playMusic.PlayLevelMusic ();
