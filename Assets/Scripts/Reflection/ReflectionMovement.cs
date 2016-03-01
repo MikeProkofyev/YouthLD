@@ -39,4 +39,8 @@ public class ReflectionMovement : MonoBehaviour {
 			animController.SetBool("running", false);
 		}		
 	}
+
+	void PlayFootStepSound () {
+		return;
+	}
 }

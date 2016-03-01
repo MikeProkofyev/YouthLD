@@ -9,10 +9,11 @@ public class StoryTextController : MonoBehaviour {
 	public AudioClip[] chars;
 
 
-	string startMessage1 = "[I've got to talk to her.]";//"One more time into the fray";
-	string startMessage2 = "[Now or never.]";
-	string winMessage = "[Exhales.]";
-	string deathMessage = "YOU DIED";
+	string startMessage1 = "[I've got to talk to her]";//"One more time into the fray";
+	string startMessage2 = "[Now or never]";
+	string winMessage1 = "- See ya )";
+	string winMessage2 = "[Exhales]";
+	string deathMessage = "Better luck next time";
 
 	public bool finishedStartSeq = false;
 	public bool finishedWinSeq = false;
@@ -51,7 +52,9 @@ public class StoryTextController : MonoBehaviour {
 	}
 
 	public IEnumerator PrintWinMessage () {
-		yield return StartCoroutine("UpdateMessage", winMessage);	
+		yield return StartCoroutine("UpdateMessage", winMessage1);	
+		yield return new WaitForSeconds(2f);  //Give the player some time to read the message
+		yield return StartCoroutine("UpdateMessage", winMessage2);	
 		yield return new WaitForSeconds(3f);  //Give the player some time to read the message
 		finishedWinSeq = true;
 	}

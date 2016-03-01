@@ -12,6 +12,7 @@ public class PlayerAttackController : MonoBehaviour {
 
 	AudioSource audioSource;
 	public AudioClip swordHit;
+	public AudioClip swordSwing;
 
 	// Use this for initialization
 	void Awake () {
@@ -31,9 +32,13 @@ public class PlayerAttackController : MonoBehaviour {
 	}
 
 	void TryHitWolf () {
-		if (wolfHealth.RecieveDamage(100)) {
+		if (wolfHealth.RecieveDamage(10)) {
 			audioSource.PlayOneShot(swordHit);
 		}
 
+	}
+
+	void PlaySwordSwingSound () {
+		audioSource.PlayOneShot (swordSwing);
 	}
 }

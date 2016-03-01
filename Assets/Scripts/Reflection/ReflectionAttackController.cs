@@ -29,4 +29,8 @@ public class ReflectionAttackController : MonoBehaviour {
 	void TryHitWolf () {
 		return;
 	}
+
+	void PlaySwordSwingSound () {
+		return;
+	}
 }

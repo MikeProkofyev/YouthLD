@@ -9,6 +9,11 @@ public class GameController : MonoBehaviour {
 	public bool skipToArena = false;
 	public bool showStartSequence = true;
 	public StoryTextController storyTxtController;
+	public AudioClip winSound;
+	public AudioClip loseSound;
+	public AudioClip battleTheme;
+	VariableStorageController variableStorage;
+	AudioSource audioSource;
 
 
 //	public bool heroDied = false;
@@ -29,16 +34,22 @@ public class GameController : MonoBehaviour {
 
 	void Awake () {
 		playerT = GameObject.FindGameObjectWithTag("Player").transform;
+		audioSource = GetComponent <AudioSource> ();
 	}
 		
 	void Start () {
+		variableStorage = GameObject.FindGameObjectWithTag("VariableStorage").GetComponent<VariableStorageController> ();
+
 		if (skipToArena){
 			playerT.position = (Vector2)battleTrigger.position - Vector2.right*4;
 //			Debug.Log("player pos " + playerT.position);
 		}
-		storyTxtController.gameObject.SetActive(showStartSequence);
-		if (showStartSequence) storyTxtController.StartCoroutine(storyTxtController.PrintStartMessage());
-		currentState = showStartSequence ? GameState.STARTSEQUENCE : GameState.GAMESTARTED;
+		bool showIntroductionText = showStartSequence && variableStorage.battlesCount == 0;
+		storyTxtController.gameObject.SetActive(showIntroductionText);	
+		if (showIntroductionText) {
+			storyTxtController.StartCoroutine(storyTxtController.PrintStartMessage());
+		}
+		currentState = showIntroductionText ? GameState.STARTSEQUENCE : GameState.GAMESTARTED;
 	}
 
 	void Update () {
@@ -55,11 +66,16 @@ public class GameController : MonoBehaviour {
 			}
 			break;
 		case GameState.WON:
-			if (storyTxtController.finishedStartSeq) {
+			if (storyTxtController.finishedWinSeq) {
 				SceneManager.LoadScene(0);
 			}
 			break;
 		}
+	}
+
+	public void PlayBattleTheme () {
+//		audioSource.PlayOneShot(battleTheme);
+		audioSource.Play();
 	}
 
 	void DestroyEntitites () {
@@ -68,14 +84,20 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void HeroDied () {
+		variableStorage.battlesCount++;
 		DestroyEntitites();
+		audioSource.Stop();
+		audioSource.PlayOneShot(loseSound);
 		storyTxtController.gameObject.SetActive(true);
 		currentState = GameState.DIED;
 		storyTxtController.StartCoroutine(storyTxtController.PrintDeathMessage());
 	}
 
 	public void HeroWon () {
-		DestroyEntitites();
+		variableStorage.battlesCount++;
+		DestroyEntitites(); //DEBATALBE
+		audioSource.Stop();
+		audioSource.PlayOneShot(winSound);
 		storyTxtController.gameObject.SetActive(true);
 		currentState = GameState.WON;
 		storyTxtController.StartCoroutine(storyTxtController.PrintWinMessage());

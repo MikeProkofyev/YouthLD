@@ -9,9 +9,11 @@ public class WolfFightController : MonoBehaviour {
 	public PlayerHealth playerHealth;
 	WolfHealth wolfHealth;
 	Animator animController;
+	VariableStorageController variableStorage;
 
 	AudioSource audioSource;
 	public AudioClip pawHit;
+	public AudioClip pawSwing;
 
 	float ttime;
 
@@ -29,6 +31,7 @@ public class WolfFightController : MonoBehaviour {
 		wolfHealth = GetComponent <WolfHealth> ();
 		animController = GetComponent<Animator> ();
 		audioSource = GetComponent<AudioSource> ();
+		variableStorage = GameObject.FindGameObjectWithTag("VariableStorage").GetComponent<VariableStorageController> ();
 	}
 
 	public IEnumerator Fight (){
@@ -51,7 +54,8 @@ public class WolfFightController : MonoBehaviour {
 	void Update () {
 		if (zonesUnderAttack[playerController.inZone()]) {
 			audioSource.PlayOneShot(pawHit);
-			playerHealth.RecieveDamage(20);
+			int damage = Mathf.Clamp(20 - variableStorage.battlesCount * 3, 5, 20);
+			playerHealth.RecieveDamage(damage);
 			ResetZones();
 		}
 	}
@@ -85,6 +89,10 @@ public class WolfFightController : MonoBehaviour {
 	void StartHighAttack () {
 		//		ttime = Time.time;
 		animController.SetTrigger("highAttack");
+	}
+
+	void PlayPawSwingSound () {
+		audioSource.PlayOneShot (pawSwing);
 	}
 
 

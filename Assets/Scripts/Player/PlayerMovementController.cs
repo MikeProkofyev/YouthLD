@@ -20,6 +20,7 @@ public class PlayerMovementController : MonoBehaviour {
 	SpriteRenderer sprite;
 	public Transform pathBackBlocker;
 	public bool inBattle = false;
+	public FootStepsSoundController footSoundController;
 
 	// Use this for initialization
 	void Start () {
@@ -104,5 +105,9 @@ public class PlayerMovementController : MonoBehaviour {
 		}else if(animController.GetBool("running")) {
 			animController.SetBool("running", false);
 		}		
+	}
+
+	void PlayFootStepSound () {
+		footSoundController.PlayFootStepSound();
 	}
 }

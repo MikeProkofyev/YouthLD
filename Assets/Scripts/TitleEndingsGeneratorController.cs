@@ -7,7 +7,7 @@ public class TitleEndingsGeneratorController : MonoBehaviour {
 
 	public Text textElement;
 
-	string [] endings = {"Jude", "you", "I'm", "my name", "what's the", "what's your"};
+	string [] endings = {"Jude", "you", "I'm", "my name", "do you", "what's the", "what's your", "love", "don't you", "every day", "don't know", "wanna"};
 	int lastEndingIdx = 0;
 	int currEndingIdx = 1;
 
