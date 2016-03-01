@@ -25,6 +25,9 @@ public class WolfFightController : MonoBehaviour {
 		
 	};
 
+	int lastAttackIdx = 0;
+	int currAttackIdx = 1;
+
 
 
 	void Awake () {
@@ -37,12 +40,22 @@ public class WolfFightController : MonoBehaviour {
 	public IEnumerator Fight (){
 		for (;;) {
 			yield return new WaitForSeconds(Random.Range(2.5f, 3.5f));
-			switch (Random.Range(0,2)) {
+
+			do {
+				currAttackIdx = Random.Range(0, 3);
+			} while (currAttackIdx == lastAttackIdx);
+			lastAttackIdx = currAttackIdx;
+
+
+			switch (lastAttackIdx) {
 			case 0:
 				StartHighAttack();
 				break;
 			case 1:
 				StartLongAttack();
+				break;
+			case 2:
+				StartLowAttack();
 				break;
 			}
 		}
@@ -86,6 +99,11 @@ public class WolfFightController : MonoBehaviour {
 		wolfHealth.vulnerable = true;
 	}
 
+	void EnableLowAttackDamage () {
+		SetAttackZones(true, false, true, true);
+		wolfHealth.vulnerable = true;
+	}
+
 	void StartHighAttack () {
 		//		ttime = Time.time;
 		animController.SetTrigger("highAttack");
@@ -99,6 +117,11 @@ public class WolfFightController : MonoBehaviour {
 	void StartLongAttack () {
 //		ttime = Time.time;
 		animController.SetTrigger("longAttack");
+	}
+
+	void StartLowAttack () {
+		//		ttime = Time.time;
+		animController.SetTrigger("lowAttack");
 	}
 
 

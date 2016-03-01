@@ -13,7 +13,7 @@ public class StoryTextController : MonoBehaviour {
 	string startMessage2 = "[Now or never]";
 	string winMessage1 = "END MESSAGE THAT EXPLAINS STUFF, v0.1";//"- Yeah, see ya )";
 	string winMessage2 = "- [Exhales]";
-	string deathMessage = "Better luck next time";
+	string deathMessage = "You lost, but you hope the you've learned something.";
 
 	public bool finishedStartSeq = false;
 	public bool finishedWinSeq = false;
