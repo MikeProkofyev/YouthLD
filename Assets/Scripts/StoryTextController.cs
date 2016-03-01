@@ -11,9 +11,9 @@ public class StoryTextController : MonoBehaviour {
 
 	string startMessage1 = "[I've got to talk to her]";//"One more time into the fray";
 	string startMessage2 = "[Now or never]";
-	string winMessage1 = "END MESSAGE THAT EXPLAINS STUFF, v0.1";//"- Yeah, see ya )";
+	string winMessage1 = "- Call me )";//"- Yeah, see ya )";
 	string winMessage2 = "- [Exhales]";
-	string deathMessage = "You lost, but you hope the you've learned something.";
+	string deathMessage = "You lost, but you hope that you've learned something.";
 
 	public bool finishedStartSeq = false;
 	public bool finishedWinSeq = false;
@@ -53,7 +53,7 @@ public class StoryTextController : MonoBehaviour {
 
 	public IEnumerator PrintWinMessage () {
 		yield return StartCoroutine("UpdateMessage", winMessage1);	
-		yield return new WaitForSeconds(2f);  //Give the player some time to read the message
+		yield return new WaitForSeconds(5f);  //Give the player some time to read the message
 		yield return StartCoroutine("UpdateMessage", winMessage2);	
 		yield return new WaitForSeconds(3f);  //Give the player some time to read the message
 		finishedWinSeq = true;
