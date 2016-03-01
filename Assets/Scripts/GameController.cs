@@ -62,13 +62,20 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	void DestroyEntitites () {
+		GameObject.FindGameObjectWithTag("Player").SetActive(false);
+		GameObject.FindGameObjectWithTag("Wolf").SetActive(false);
+	}
+
 	public void HeroDied () {
+		DestroyEntitites();
 		storyTxtController.gameObject.SetActive(true);
 		currentState = GameState.DIED;
 		storyTxtController.StartCoroutine(storyTxtController.PrintDeathMessage());
 	}
 
 	public void HeroWon () {
+		DestroyEntitites();
 		storyTxtController.gameObject.SetActive(true);
 		currentState = GameState.WON;
 		storyTxtController.StartCoroutine(storyTxtController.PrintWinMessage());

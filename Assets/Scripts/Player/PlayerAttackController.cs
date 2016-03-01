@@ -31,7 +31,7 @@ public class PlayerAttackController : MonoBehaviour {
 	}
 
 	void TryHitWolf () {
-		if (wolfHealth.RecieveDamage(5)) {
+		if (wolfHealth.RecieveDamage(100)) {
 			audioSource.PlayOneShot(swordHit);
 		}
 

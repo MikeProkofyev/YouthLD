@@ -32,6 +32,7 @@ public class WolfHealth : MonoBehaviour {
 			healthBarImage.fillAmount = hp/100f;
 			if (hp <= 0) {
 				gameController.HeroWon();
+				return true;
 			}	
 			StartCoroutine("PauseWaitResume", 0.2f);
 		}
